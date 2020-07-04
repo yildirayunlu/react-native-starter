@@ -1,13 +1,9 @@
 import * as React from 'react';
 
-import { Feed } from './screens';
+import Navigation from './Navigation';
 
 const App = () => {
-  return (
-    <>
-      <Feed />
-    </>
-  );
+  return <Navigation />;
 };
 
 export default App;
