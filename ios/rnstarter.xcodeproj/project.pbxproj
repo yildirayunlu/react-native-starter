@@ -125,7 +125,6 @@
 		13B07FAE1A68108700A75B9A /* rnstarter */ = {
 			isa = PBXGroup;
 			children = (
-				4560013724B21ED000F4600F /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -148,14 +147,6 @@
 				0A504F63809F33E6C5CB1A50 /* libPods-rnstarter-tvOSTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4560013724B21ED000F4600F /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				4560013824B21EDD00F4600F /* FontAwesome.ttf */,
-			);
-			name = Fonts;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
