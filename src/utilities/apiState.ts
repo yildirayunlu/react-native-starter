@@ -1,0 +1,17 @@
+import { ApiStatus } from '@interfaces/enums';
+
+export function isInit(status: ApiStatus) {
+  return ApiStatus.init === status;
+}
+
+export function isLoaded(status: ApiStatus) {
+  return ApiStatus.loaded === status;
+}
+
+export function isFailed(status: ApiStatus) {
+  return ApiStatus.failed === status;
+}
+
+export function isLoading(status: ApiStatus) {
+  return status <= ApiStatus.loading;
+}
