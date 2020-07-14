@@ -3,9 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Feed, Profile } from './screens';
+import { Feed, Profile, Login, Register } from '@screens';
 
-const Navigation = () => {
+const AuthorizedNavigation = () => {
   const TabNavigator = createBottomTabNavigator();
   const StackNavigator = createStackNavigator();
 
@@ -29,6 +29,28 @@ const Navigation = () => {
       </TabNavigator.Navigator>
     </NavigationContainer>
   );
+};
+
+const UnauthorizedNavigation = () => {
+  const StackNavigator = createStackNavigator();
+
+  return (
+    <NavigationContainer>
+      <StackNavigator.Navigator>
+        <StackNavigator.Screen name="Login" component={Login} />
+        <StackNavigator.Screen name="Register" component={Register} />
+      </StackNavigator.Navigator>
+    </NavigationContainer>
+  );
+};
+
+const Navigation = () => {
+  // check auth
+  if (true) {
+    return <UnauthorizedNavigation />;
+  }
+
+  return <AuthorizedNavigation />;
 };
 
 export default Navigation;
