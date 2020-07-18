@@ -1,18 +1,27 @@
 import * as React from 'react';
 import { Button } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+// import { useNavigation } from '@react-navigation/native';
 
-import { Box, Text } from '@components';
+import { Box, TextInput } from '@components';
 
 export const Login: React.FC = () => {
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
   return (
-    <Box>
-      <Text>Login Screen</Text>
-      <Button
-        title="Go to Register"
-        onPress={() => navigation.navigate('Register')}
+    <Box style={{ padding: 16 }}>
+      <TextInput
+        label="Email"
+        autoCapitalize="none"
+        keyboardType="email-address"
+        errorText="This field is required!"
       />
+      <TextInput
+        label="Password"
+        autoCapitalize="none"
+        textContentType="password"
+        isValid={true}
+        errorText="This field is required!"
+      />
+      <Button title="Login" onPress={() => {}} />
     </Box>
   );
 };

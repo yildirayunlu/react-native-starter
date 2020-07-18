@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Feed, Profile, Login, Register } from '@screens';
+import { Feed, Profile, Login, Register } from './screens';
 
 const AuthorizedNavigation = () => {
   const TabNavigator = createBottomTabNavigator();

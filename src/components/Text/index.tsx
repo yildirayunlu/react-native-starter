@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Text as BaseText } from 'react-native';
+import { Text as BaseText, TextProps } from 'react-native';
 
-type Props = {};
+type Props = TextProps & {};
 export const Text: React.FC<Props> = ({ children, ...rest }) => {
   return <BaseText {...rest}>{children}</BaseText>;
 };
