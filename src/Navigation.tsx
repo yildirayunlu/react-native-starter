@@ -2,8 +2,10 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
+import { useSelector } from 'react-redux';
 
 import { Feed, Profile, Login, Register } from './screens';
+import { IStore } from '@interfaces';
 
 const AuthorizedNavigation = () => {
   const TabNavigator = createBottomTabNavigator();
@@ -45,8 +47,10 @@ const UnauthorizedNavigation = () => {
 };
 
 const Navigation = () => {
+  const auth = useSelector((state: IStore) => state.auth);
+
   // check auth
-  if (true) {
+  if (!auth.isLogin) {
     return <UnauthorizedNavigation />;
   }
 

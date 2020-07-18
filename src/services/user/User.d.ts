@@ -1,4 +1,8 @@
 export declare namespace User {
+  interface LoginRequest {
+    email: string;
+    password: string;
+  }
   interface ListResponse {
     page: number;
     per_page: number;
@@ -13,5 +17,9 @@ export declare namespace User {
     first_name: string;
     last_name: string;
     avatar: string;
+  }
+
+  interface AuthenticatedUser extends UserItem {
+    token: string;
   }
 }

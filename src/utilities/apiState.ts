@@ -13,5 +13,5 @@ export function isFailed(status: ApiStatus) {
 }
 
 export function isLoading(status: ApiStatus) {
-  return status <= ApiStatus.loading;
+  return ApiStatus.loading === status;
 }

@@ -3,17 +3,17 @@ export const ActionConsts = {
     login: '[auth / authentication] login',
     logout: '[auth / authentication] logout',
   },
-  login: {
-    request: '[user / login] request',
-    success: '[user / login] success',
-    failed: '[user / login] failed',
-  },
-  register: {
-    request: '[user / register] request',
-    success: '[user / register] success',
-    failed: '[user / register] failed',
-  },
   user: {
+    login: {
+      request: '[user / login] request',
+      success: '[user / login] success',
+      failed: '[user / login] failed',
+    },
+    register: {
+      request: '[user / register] request',
+      success: '[user / register] success',
+      failed: '[user / register] failed',
+    },
     list: {
       request: '[user / list] request',
       success: '[user / list] success',
