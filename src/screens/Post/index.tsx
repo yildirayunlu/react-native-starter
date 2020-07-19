@@ -27,9 +27,11 @@ export const Post: React.FC = () => {
 
   return (
     <FlatList
+      keyExtractor={(item, index) => index.toString()}
       data={postList.data}
       renderItem={({ item }) => (
         <PostCard
+          key={item.id}
           id={item.id}
           title={item.title}
           content={item.content}
