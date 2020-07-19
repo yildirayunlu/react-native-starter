@@ -14,10 +14,12 @@ export const ActionConsts = {
       success: '[user / register] success',
       failed: '[user / register] failed',
     },
+  },
+  post: {
     list: {
-      request: '[user / list] request',
-      success: '[user / list] success',
-      failed: '[user / list] failed',
+      request: '[post / list] request',
+      success: '[post / list] success',
+      failed: '[post / list] failed',
     },
   },
 };

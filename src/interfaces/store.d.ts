@@ -1,9 +1,11 @@
-import { IUserListReducer, IUserLoginReducer, IAuthReducer } from '@interfaces';
+import { IPostListReducer, IUserLoginReducer, IAuthReducer } from '@interfaces';
 
 export interface IStore {
   auth: IAuthReducer.State;
   user: {
-    list: IUserListReducer.State;
     login: IUserLoginReducer.State;
+  };
+  post: {
+    list: IPostListReducer.State;
   };
 }

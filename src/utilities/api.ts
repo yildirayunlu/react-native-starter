@@ -1,6 +1,8 @@
 import { create } from 'apisauce';
 
-const baseURL = 'https://reqres.in/api/';
+// TODO: Move .env file
+const baseURL =
+  'https://my-json-server.typicode.com/yildirayunlu/demo-rest-api';
 
 export const Api = create({
   baseURL,

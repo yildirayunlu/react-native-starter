@@ -4,16 +4,16 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useSelector } from 'react-redux';
 
-import { Feed, Profile, Login, Register } from './screens';
+import { Post, Profile, Login } from './screens';
 import { IStore } from '@interfaces';
 
 const AuthorizedNavigation = () => {
   const TabNavigator = createBottomTabNavigator();
   const StackNavigator = createStackNavigator();
 
-  const FeedStack = () => (
+  const PostStack = () => (
     <StackNavigator.Navigator>
-      <StackNavigator.Screen name="Feed" component={Feed} />
+      <StackNavigator.Screen name="Post" component={Post} />
     </StackNavigator.Navigator>
   );
 
@@ -26,7 +26,7 @@ const AuthorizedNavigation = () => {
   return (
     <NavigationContainer>
       <TabNavigator.Navigator>
-        <TabNavigator.Screen name="Feed" component={FeedStack} />
+        <TabNavigator.Screen name="Posts" component={PostStack} />
         <TabNavigator.Screen name="Profile" component={ProfileStack} />
       </TabNavigator.Navigator>
     </NavigationContainer>
@@ -40,7 +40,6 @@ const UnauthorizedNavigation = () => {
     <NavigationContainer>
       <StackNavigator.Navigator>
         <StackNavigator.Screen name="Login" component={Login} />
-        <StackNavigator.Screen name="Register" component={Register} />
       </StackNavigator.Navigator>
     </NavigationContainer>
   );

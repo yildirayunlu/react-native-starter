@@ -3,13 +3,6 @@ export declare namespace User {
     email: string;
     password: string;
   }
-  interface ListResponse {
-    page: number;
-    per_page: number;
-    total: number;
-    total_pages: number;
-    data: UserItem[];
-  }
 
   interface UserItem {
     id: number;
@@ -19,7 +12,8 @@ export declare namespace User {
     avatar: string;
   }
 
-  interface AuthenticatedUser extends UserItem {
+  interface AuthenticatedUser {
     token: string;
+    user: UserItem;
   }
 }

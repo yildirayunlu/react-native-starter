@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from 'react-native';
+import { Button, View } from 'react-native';
 import * as yup from 'yup';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers';
@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import { useNavigation } from '@react-navigation/native';
 
 import { UserActions } from '@actions';
-import { Box, Text, TextInput } from '@components';
+import { Text, TextInput } from '@components';
 import { isLoading, isFailed } from '@utilities/apiState';
 import { IStore } from '@interfaces';
 
@@ -56,7 +56,7 @@ export const Login: React.FC = () => {
 
   return (
     // TODO: Container component
-    <Box style={{ padding: 16 }}>
+    <View style={{ padding: 16 }}>
       {renderFormError()}
       <Controller
         control={control}
@@ -83,6 +83,7 @@ export const Login: React.FC = () => {
             label="Password"
             autoCapitalize="none"
             textContentType="password"
+            secureTextEntry
             onBlur={onBlur}
             onChangeText={(text) => onChange(text)}
             value={value}
@@ -99,6 +100,6 @@ export const Login: React.FC = () => {
         title="Login"
         onPress={handleSubmit(onSubmit)}
       />
-    </Box>
+    </View>
   );
 };

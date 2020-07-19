@@ -1,7 +1,6 @@
 // authorized screens
-export * from './Feed';
+export * from './Post';
 export * from './Profile';
 
 // unauthorized screens
 export * from './Login';
-export * from './Register';

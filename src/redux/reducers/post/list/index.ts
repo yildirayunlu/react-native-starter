@@ -1,34 +1,28 @@
 import { ActionConsts } from '@redux/actionConsts';
-import { IUserListReducer } from '@interfaces';
+import { IPostListReducer } from '@interfaces';
 import { ApiStatus } from '@interfaces/enums';
 
-const INITIAL_STATE: IUserListReducer.State = {
+const INITIAL_STATE: IPostListReducer.State = {
   status: ApiStatus.init,
   data: [],
-  pagination: {
-    per_page: 1,
-    page: 1,
-    total: 0,
-    total_pages: 0,
-  },
 };
 
-export const USER_LIST_STATE = INITIAL_STATE;
+export const POST_LIST_STATE = INITIAL_STATE;
 
-export const UserListReducer = (state = INITIAL_STATE, action: any) => {
+export const PostListReducer = (state = INITIAL_STATE, action: any) => {
   switch (action.type) {
-    case ActionConsts.user.list.request:
+    case ActionConsts.post.list.request:
       return {
         ...state,
         status: ApiStatus.loading,
       };
-    case ActionConsts.user.list.success:
+    case ActionConsts.post.list.success:
       return {
         ...state,
         ...action.payload,
         status: ApiStatus.loaded,
       };
-    case ActionConsts.user.list.failed:
+    case ActionConsts.post.list.failed:
       return {
         ...state,
         error: action.error,
