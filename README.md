@@ -2,7 +2,7 @@
 
 This project is a React Native boilerplate that can be used to kickstart a mobile application.
 
-## Features
+## Features
 
 - TypeScript
 - React Navigation and Authentication flow
@@ -12,7 +12,8 @@ This project is a React Native boilerplate that can be used to kickstart a mobil
 - React Native Vector Icons (Material Icons)
 - React Testing Library
 
-## Demo
+## Demo
+
 TODO: ScreenShot
 
 ## Getting Started
