@@ -28,3 +28,6 @@ TODO: ScreenShot
 
 - [ ] [CodePush](https://github.com/microsoft/react-native-code-push)
 - [ ] [Detox](https://github.com/wix/Detox)
+- [ ] [StoryBook](https://storybook.js.org)
+- [ ] [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash#-react-native-bootsplash)
+- [ ] [react-i18next](https://react.i18next.com)
