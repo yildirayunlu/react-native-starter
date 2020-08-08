@@ -1,10 +1,12 @@
 import { createTheme } from '@shopify/restyle';
 
+import colors from '@styles/colors';
+
 const theme = createTheme({
   colors: {
-    bg: '#fff',
-    text: '#000',
-    ghost: '#ccc',
+    bg: colors.white,
+    text: colors.black,
+    ghost: colors.black,
   },
   spacing: {
     s: 8,
