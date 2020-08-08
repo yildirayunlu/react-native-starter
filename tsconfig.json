@@ -48,7 +48,9 @@
       "@services": ["src/services"],
       "@services/*": ["src/services/*"],
       "@utilities": ["src/utilities"],
-      "@utilities/*": ["src/utilities/*"]
+      "@utilities/*": ["src/utilities/*"],
+      "@styles": ["src/styles"],
+      "@styles/*": ["src/styles/*"]
     },
     // "rootDirs": [],
     // "typeRoots": [],
