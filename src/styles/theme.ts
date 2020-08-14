@@ -6,7 +6,7 @@ const theme = createTheme({
   colors: {
     bg: colors.white,
     text: colors.black,
-    ghost: colors.black,
+    ghost: colors.gray,
   },
   spacing: {
     s: 8,

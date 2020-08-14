@@ -3,13 +3,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useSelector } from 'react-redux';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { useTheme } from '@shopify/restyle';
 
 import { Post, Profile, Login } from './screens';
+import { Theme } from '@styles/theme';
 import { IStore } from '@interfaces';
 
 const AuthorizedNavigation = () => {
   const TabNavigator = createBottomTabNavigator();
   const StackNavigator = createStackNavigator();
+  const theme = useTheme<Theme>();
 
   const PostStack = () => (
     <StackNavigator.Navigator>
@@ -25,9 +29,37 @@ const AuthorizedNavigation = () => {
 
   return (
     <NavigationContainer>
-      <TabNavigator.Navigator>
-        <TabNavigator.Screen name="Posts" component={PostStack} />
-        <TabNavigator.Screen name="Profile" component={ProfileStack} />
+      <TabNavigator.Navigator
+        tabBarOptions={{
+          activeTintColor: theme.colors.text,
+          inactiveTintColor: theme.colors.ghost,
+        }}>
+        <TabNavigator.Screen
+          name="Posts"
+          component={PostStack}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                name="list"
+                size={26}
+                color={focused ? theme.colors.text : theme.colors.ghost}
+              />
+            ),
+          }}
+        />
+        <TabNavigator.Screen
+          name="Profile"
+          component={ProfileStack}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                name="person"
+                size={26}
+                color={focused ? theme.colors.text : theme.colors.ghost}
+              />
+            ),
+          }}
+        />
       </TabNavigator.Navigator>
     </NavigationContainer>
   );
