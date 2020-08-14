@@ -31,3 +31,7 @@ TODO: ScreenShot
 - [ ] [StoryBook](https://storybook.js.org)
 - [ ] [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash#-react-native-bootsplash)
 - [ ] [react-i18next](https://react.i18next.com)
+
+## Similar Repositories
+
+- [pankod/react-native-boilerplate](https://github.com/pankod/react-native-boilerplate)
