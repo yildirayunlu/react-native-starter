@@ -7,6 +7,9 @@ const theme = createTheme({
     bg: colors.white,
     text: colors.black,
     ghost: colors.gray,
+    success: colors.success,
+    danger: colors.danger,
+    warning: colors.warning,
   },
   spacing: {
     s: 8,

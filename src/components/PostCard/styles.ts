@@ -15,7 +15,4 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 5,
   },
-  content: {
-    color: '#111',
-  },
 });

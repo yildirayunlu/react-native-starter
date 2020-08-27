@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, TextInput as RNTextInput, TextInputProps } from 'react-native';
+import { TextInput as RNTextInput, TextInputProps } from 'react-native';
 
-import { Text } from '@components';
+import { Text, Box } from '@components';
 import styles from './styles';
 
 type Props = TextInputProps & {
@@ -15,13 +15,13 @@ export const TextInput: React.FC<Props> = ({
   ...otherProps
 }) => {
   return (
-    <View style={styles.container}>
+    <Box style={styles.container}>
       <Text style={styles.label}>{label}</Text>
       <RNTextInput
         style={[styles.textInput, !!errorText && styles.textInputError]}
         {...otherProps}
       />
       {errorText && <Text style={styles.errorText}>{errorText}</Text>}
-    </View>
+    </Box>
   );
 };

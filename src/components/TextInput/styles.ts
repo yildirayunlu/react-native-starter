@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import theme from '@styles/theme';
+
 export default StyleSheet.create({
   container: {
     marginBottom: 16,
@@ -10,19 +12,19 @@ export default StyleSheet.create({
   },
   textInput: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: theme.colors.ghost,
     borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 10,
     fontSize: 16,
   },
   textInputSuccess: {
-    borderColor: 'green',
+    borderColor: theme.colors.success,
   },
   textInputError: {
-    borderColor: 'red',
+    borderColor: theme.colors.danger,
   },
   errorText: {
-    color: 'red',
+    color: theme.colors.danger,
   },
 });

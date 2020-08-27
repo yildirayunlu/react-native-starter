@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { View, FlatList } from 'react-native';
+import { FlatList, ActivityIndicator } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { PostActions } from '@actions';
-import { Text, PostCard } from '@components';
+import { PostCard, Box } from '@components';
 import { isLoading } from '@utilities/apiState';
 import { IStore } from '@interfaces';
 
@@ -19,9 +19,9 @@ export const Post: React.FC = () => {
 
   if (isLoading(postList.status)) {
     return (
-      <View>
-        <Text>loading...</Text>
-      </View>
+      <Box p="m">
+        <ActivityIndicator />
+      </Box>
     );
   }
 
