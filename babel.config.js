@@ -12,6 +12,7 @@ module.exports = {
           '@redux': './src/redux',
           '@services': './src/services',
           '@utilities': './src/utilities',
+          '@styles': './src/styles',
         },
       },
     ],
