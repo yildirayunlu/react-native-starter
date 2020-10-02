@@ -22,6 +22,7 @@ TODO: ScreenShot
 - Remove `.git` folder `rm -rf .git`.
 - Use [React Native Rename](https://github.com/junedomingo/react-native-rename) to update project name `npx react-native-rename <your app name>`.
 - Install dependencies `npm install`.
+- Install pods `cd ios && pod install`.
 - Run project `npm run ios | android`.
 
 ## TODO
