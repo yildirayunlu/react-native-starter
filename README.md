@@ -14,7 +14,7 @@ This project is a React Native boilerplate that can be used to kickstart a mobil
 
 ## Demo
 
-TODO: ScreenShot
+![ss](/screenshot.gif)
 
 ## Getting Started
 
